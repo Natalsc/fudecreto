@@ -1,0 +1,8 @@
+C:\Natal Projetos\Futeba\Futeba\bin\Debug\Futeba.exe
+C:\Natal Projetos\Futeba\Futeba\bin\Debug\Futeba.pdb
+C:\Natal Projetos\Futeba\Futeba\obj\Debug\Futeba.csprojResolveAssemblyReference.cache
+C:\Natal Projetos\Futeba\Futeba\obj\Debug\Futeba.Form1.resources
+C:\Natal Projetos\Futeba\Futeba\obj\Debug\Futeba.Properties.Resources.resources
+C:\Natal Projetos\Futeba\Futeba\obj\Debug\Futeba.csproj.GenerateResource.Cache
+C:\Natal Projetos\Futeba\Futeba\obj\Debug\Futeba.exe
+C:\Natal Projetos\Futeba\Futeba\obj\Debug\Futeba.pdb
