@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <string name="app_name">Sorteio Futeba</string>
+  <string name="drawer_open">Open</string>
+  <string name="drawer_close">Close</string>
+  <string name="menu_refresh">Refresh</string>
+  <string name="fragment1">Escalar Time</string>
+  <string name="fragment2">Incluir Jogador</string>
+  <string name="fragment3">Opções de Conta</string>
+  <string name="position1">Goleiro</string>
+  <string name="position2">Defesa</string>
+  <string name="position3">Ataque</string>
+</resources>

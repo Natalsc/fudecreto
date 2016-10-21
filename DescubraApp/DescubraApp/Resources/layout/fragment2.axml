@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center_horizontal">
+    <LinearLayout
+        android:orientation="vertical"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/space1"
+            android:layout_marginBottom="15dp" />
+        <TextView
+            android:text="Nome do Jogador"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView1"
+            android:gravity="center" />
+        <EditText
+            android:inputType="textPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextName" />
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/space1"
+            android:layout_marginBottom="15dp" />
+        <TextView
+            android:text="Posição Jogador"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:gravity="center" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:gravity="center">
+        <RadioButton
+            android:text="@string/position1"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/radioButton1"
+            android:paddingRight="10px" />
+        <RadioButton
+            android:text="@string/position2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/radioButton2"
+            android:paddingRight="10dp" />
+        <RadioButton
+            android:text="@string/position3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/radioButton3" />
+    </LinearLayout>
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/space1"
+        android:layout_marginBottom="15dp" />
+    <TextView
+        android:text="Habilidade do Jogador"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView3"
+        android:gravity="center" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout2"
+        android:gravity="center">
+        <RatingBar
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar1" />
+    </LinearLayout>
+    <Button
+        android:text="Salvar"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/buttonSave"
+        android:gravity="center" />
+</LinearLayout>
