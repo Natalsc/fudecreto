@@ -1,6 +1,10 @@
+using System;
+using System.Collections.Generic;
+using Android.App;
 using Android.OS;
-using Android.Support.V4.App;
 using Android.Views;
+using Android.Widget;
+using Fragment = Android.Support.V4.App.Fragment;
 
 namespace DescubraApp.Fragments
 {
@@ -8,9 +12,48 @@ namespace DescubraApp.Fragments
     {
         public override void OnCreate(Bundle savedInstanceState)
         {
-            base.OnCreate(savedInstanceState);
+            try
+            {
+                base.OnCreate(savedInstanceState);
+                Activity.SetContentView(Resource.Layout.main);
+                var listView = Activity.FindViewById<ListView>(Resource.Id.lvDados);
 
-            // Create your fragment here
+                var times = new List<string>
+            {
+                "Santos",
+                "Grêmio",
+                "Coritiba",
+                "Flamengo",
+                "São Paulo",
+                "Palmeiras",
+                "Vasco",
+                "Bahia",
+                "Corinthians",
+                "Sport",
+                "Internacional",
+                "Cruzeiro",
+                "Atletico",
+                "Vitoria"
+            };
+                var adapter = new ArrayAdapter<string>(Activity, Android.Resource.Layout.SimpleListItem1, times);
+                listView.Adapter = adapter;
+                listView.ItemClick += (sender, e) =>
+                {
+                    using (var dialog = new AlertDialog.Builder(Activity))
+                    {
+                        var posicao = e.Position;
+                        var valor = times[posicao];
+                        dialog.SetTitle("Time Selecionado");
+                        dialog.SetMessage(valor);
+                        dialog.Show();
+                    }
+                };
+                // Create your fragment here
+            }
+            catch (Exception ex)
+            {
+
+            }
         }
 
         public static Fragment1 NewInstance()
