@@ -6,5 +6,3 @@ C:\Natal Projetos\Futeba\Futeba\obj\Debug\Futeba.Properties.Resources.resources
 C:\Natal Projetos\Futeba\Futeba\obj\Debug\Futeba.csproj.GenerateResource.Cache
 C:\Natal Projetos\Futeba\Futeba\obj\Debug\Futeba.exe
 C:\Natal Projetos\Futeba\Futeba\obj\Debug\Futeba.pdb
-C:\Fudecreto\Futeba\Futeba\Futeba\obj\Debug\Futeba.exe
-C:\Fudecreto\Futeba\Futeba\Futeba\obj\Debug\Futeba.pdb

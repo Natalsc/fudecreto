@@ -32,9 +32,11 @@
             this.gridtime1 = new System.Windows.Forms.DataGridView();
             this.gridTime2 = new System.Windows.Forms.DataGridView();
             this.gridTime3 = new System.Windows.Forms.DataGridView();
+            this.gridRestante = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.gridtime1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridTime2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridTime3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridRestante)).BeginInit();
             this.SuspendLayout();
             // 
             // btnRandomize
@@ -53,6 +55,7 @@
             this.gridtime1.AllowUserToDeleteRows = false;
             this.gridtime1.AllowUserToResizeColumns = false;
             this.gridtime1.AllowUserToResizeRows = false;
+            this.gridtime1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridtime1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridtime1.Location = new System.Drawing.Point(12, 59);
             this.gridtime1.Name = "gridtime1";
@@ -66,6 +69,7 @@
             this.gridTime2.AllowUserToDeleteRows = false;
             this.gridTime2.AllowUserToResizeColumns = false;
             this.gridTime2.AllowUserToResizeRows = false;
+            this.gridTime2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridTime2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridTime2.Location = new System.Drawing.Point(233, 59);
             this.gridTime2.Name = "gridTime2";
@@ -79,6 +83,7 @@
             this.gridTime3.AllowUserToDeleteRows = false;
             this.gridTime3.AllowUserToResizeColumns = false;
             this.gridTime3.AllowUserToResizeRows = false;
+            this.gridTime3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridTime3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridTime3.Location = new System.Drawing.Point(454, 59);
             this.gridTime3.Name = "gridTime3";
@@ -86,11 +91,26 @@
             this.gridTime3.Size = new System.Drawing.Size(215, 180);
             this.gridTime3.TabIndex = 1;
             // 
+            // gridRestante
+            // 
+            this.gridRestante.AllowUserToAddRows = false;
+            this.gridRestante.AllowUserToDeleteRows = false;
+            this.gridRestante.AllowUserToResizeColumns = false;
+            this.gridRestante.AllowUserToResizeRows = false;
+            this.gridRestante.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.gridRestante.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridRestante.Location = new System.Drawing.Point(675, 59);
+            this.gridRestante.Name = "gridRestante";
+            this.gridRestante.RowHeadersVisible = false;
+            this.gridRestante.Size = new System.Drawing.Size(215, 180);
+            this.gridRestante.TabIndex = 1;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(680, 251);
+            this.ClientSize = new System.Drawing.Size(896, 251);
+            this.Controls.Add(this.gridRestante);
             this.Controls.Add(this.gridTime3);
             this.Controls.Add(this.gridTime2);
             this.Controls.Add(this.gridtime1);
@@ -101,6 +121,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.gridtime1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridTime2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridTime3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridRestante)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -111,6 +132,7 @@
         private System.Windows.Forms.DataGridView gridtime1;
         private System.Windows.Forms.DataGridView gridTime2;
         private System.Windows.Forms.DataGridView gridTime3;
+        private System.Windows.Forms.DataGridView gridRestante;
     }
 }
 

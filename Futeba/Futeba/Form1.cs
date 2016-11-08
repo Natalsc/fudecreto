@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Futeba
@@ -16,110 +12,196 @@ namespace Futeba
             InitializeComponent();
         }
 
-        Random _random = new Random();
-        DataTable _players = new DataTable();
+        private const string Connection = "Data Source=localhost;User=aggersa;password=1800Dz10;Initial Catalog=futeba;MultipleActiveResultSets=True";
+
+        private DataTable FeedPlayers()
+        {
+            /*              
+             CREATE TABLE player(
+                playerid BIGINT IDENTITY(1,1) NOT NULL,
+                name VARCHAR(100) NOT NULL,
+                positionid BIGINT NOT NULL,
+                playerlevel SMALLINT NOT NULL,
+                status VARCHAR(1) NOT NULL,
+                PRIMARY KEY(playerid)
+                );
+            */
+            gridtime1.DataSource = null;
+            gridTime2.DataSource = null;
+            gridTime3.DataSource = null;
+            gridRestante.DataSource = null;
+
+            var players = new DataTable();
+
+            using (var sqlConnection = new SqlConnection(Connection))
+            {
+                sqlConnection.Open();
+                using (var sqlCommand = sqlConnection.CreateCommand())
+                {
+                    sqlCommand.CommandText = "SELECT * FROM player WHERE status = 1";
+                    using (var sqlDa = new SqlDataAdapter())
+                    {
+                        sqlDa.SelectCommand = sqlCommand;
+                        sqlDa.Fill(players);
+                    }
+                }
+            }
+            return players;
+        } 
 
         private void Randomize()
         {
-            var times = _players.Rows.Count/6;
-            var timeLevel = 0;
-            foreach (DataRow players in _players.Rows)
+            var players = FeedPlayers();
+
+            var times = players.Rows.Count / 5;
+            players = shuffleTable(players, players.Rows.Count);
+
+            var countDefense = 0;
+            var levelDefense = 0;
+            var foundDefence = players.Select($"positionid = 1");
+            foreach (var row in foundDefence)
             {
-                timeLevel += int.Parse(players["level"].ToString());
+                countDefense++;
+                levelDefense += int.Parse(row["playerlevel"].ToString());
             }
 
-            timeLevel = timeLevel / times;
+            levelDefense = levelDefense / times;
 
-            var sort = "level desc";
-            for (var i = 1; i < 7; i++)
+            var countAttack = 0;
+            var levelAttack = 0;
+            var foundAttack = players.Select($"positionid = 2");
+            foreach (var row in foundAttack)
             {
-                var expression = $"position = {i}";
-                var foundRows = _players.Select(expression);
+                countAttack++;
+                levelAttack += int.Parse(row["playerlevel"].ToString());
+            }
 
-                var playersName = "";
-                var iCount = 1;
-                foreach (var row in foundRows)
+            levelAttack = levelAttack / times;
+
+            var tableTimes = new DataTable();
+            tableTimes.Columns.Add("name", typeof(string));
+            tableTimes.Columns.Add("time", typeof(int));
+
+            for (var i = 1; i <= times; i++)
+            {
+                var defenseTime = 0;
+                countDefense = 0;
+                foreach (var row in foundDefence)
                 {
-                    if (row["time"].ToString() != string.Empty)continue;
-                    playersName += $"{row["name"]},";
-                }
-
-                var array = playersName.Split(',');
-
-                Shuffle(array);
-                foreach (var value in array)
-                {
-                    if (string.IsNullOrEmpty(value)) continue;
-                    foreach (DataRow players in _players.Rows)
+                    if (row["name"].ToString() == "dontuse") continue;
+                    if (countDefense > 1) continue;
+                    defenseTime += int.Parse(row["playerlevel"].ToString());
+                    if ((levelDefense * 1.1) >= defenseTime)
                     {
-                        if (value == players["name"].ToString())
-                            players["time"] = iCount;
+                        var line = tableTimes.NewRow();
+                        line["name"] = row["name"];
+                        line["time"] = i;
+                        tableTimes.Rows.Add(line);
+                        countDefense++;
+                        row["name"] = "dontuse";
                     }
-                    if (iCount == times)
-                        break;
-
-                    iCount++;
+                    else
+                        defenseTime -= int.Parse(row["playerlevel"].ToString());
                 }
+
+                var attackTime = 0;
+                countAttack = 0;
+                foreach (var row in foundAttack)
+                {
+                    if (row["name"].ToString() == "dontuse") continue;
+                    if (countAttack > 2) continue;
+                    attackTime += int.Parse(row["playerlevel"].ToString());
+                    if ((levelAttack * 1.1) >= attackTime)
+                    {
+                        var line = tableTimes.NewRow();
+                        line["name"] = row["name"];
+                        line["time"] = i;
+                        tableTimes.Rows.Add(line);
+                        countAttack++;
+                        row["name"] = "dontuse";
+                    }
+                    else
+                        attackTime -= int.Parse(row["playerlevel"].ToString());
+                }
+            }
+
+            foreach (var row in foundAttack)
+            {
+                if (row["name"].ToString() == "dontuse") continue;
+                var line = tableTimes.NewRow();
+                line["name"] = row["name"];
+                line["time"] = times+1;
+                tableTimes.Rows.Add(line);
+            }
+
+            foreach (var row in foundDefence)
+            {
+                if(row["name"].ToString() == "dontuse") continue;
+                if (row["name"].ToString() == "dontuse") continue;
+                var line = tableTimes.NewRow();
+                line["name"] = row["name"];
+                line["time"] = times + 1;
+                tableTimes.Rows.Add(line);
             }
 
             var time1 = new DataTable();
             time1.Columns.Add("name", typeof(string));
-            time1.Columns.Add("level", typeof(int));
             var time2 = new DataTable();
             time2.Columns.Add("name", typeof(string));
-            time2.Columns.Add("level", typeof(int));
             var time3 = new DataTable();
             time3.Columns.Add("name", typeof(string));
-            time3.Columns.Add("level", typeof(int));
+            var time4 = new DataTable();
+            time4.Columns.Add("name", typeof(string));
 
-            for (var i = 1; i <= 3; i++)
+            foreach (DataRow rows in tableTimes.Rows)
             {
-                var expression = $"time = {i}";
-                var foundRows = _players.Select(expression);
-                
-                foreach (var rows in foundRows)
+                if (rows["time"].ToString() == "1")
                 {
-                    if (rows["time"].ToString() == "1")
-                    {
-                        var row = time1.NewRow();
-                        row["name"] = rows["name"];
-                        row["level"] = rows["level"];
-                        time1.Rows.Add(row);
-                    }
+                    var row = time1.NewRow();
+                    row["name"] = rows["name"];
+                    time1.Rows.Add(row);
+                }
 
-                    if (rows["time"].ToString() == "2")
-                    {
-                        var row = time2.NewRow();
-                        row["name"] = rows["name"];
-                        row["level"] = rows["level"];
-                        time2.Rows.Add(row);
-                    }
+                if (rows["time"].ToString() == "2")
+                {
+                    var row = time2.NewRow();
+                    row["name"] = rows["name"];
+                    time2.Rows.Add(row);
+                }
 
-                    if (rows["time"].ToString() == "3")
-                    {
-                        var row = time3.NewRow();
-                        row["name"] = rows["name"];
-                        row["level"] = rows["level"];
-                        time3.Rows.Add(row);
-                    }
+                if (rows["time"].ToString() == "3")
+                {
+                    var row = time3.NewRow();
+                    row["name"] = rows["name"];
+                    time3.Rows.Add(row);
+                }
+
+                if (rows["time"].ToString() == "4")
+                {
+                    var row = time4.NewRow();
+                    row["name"] = rows["name"];
+                    time4.Rows.Add(row);
                 }
             }
+
 
             gridtime1.DataSource = time1;
             gridTime2.DataSource = time2;
             gridTime3.DataSource = time3;
+            gridRestante.DataSource = time4;
         }
 
-        private void Shuffle<T>(T[] array)
+        private DataTable shuffleTable(DataTable inputTable, int shuffleIterations)
         {
-            var random = _random;
-            for (var i = array.Length; i > 1; i--)
+            var rnd = new Random();
+            // Remove and throw to the end random rows until we have done so n*3 times (shuffles the dataset)
+            for (var i = 0; i < shuffleIterations; i++)
             {
-                var j = random.Next(i);
-                var tmp = array[j];
-                array[j] = array[i - 1];
-                array[i - 1] = tmp;
+                var index = rnd.Next(0, inputTable.Rows.Count - 1);
+                inputTable.Rows.Add(inputTable.Rows[index].ItemArray);
+                inputTable.Rows.RemoveAt(index);
             }
+            return inputTable;
         }
 
         private void btnRandomize_Click(object sender, EventArgs e)
@@ -129,129 +211,6 @@ namespace Futeba
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            _players.Columns.Add("name", typeof (string));
-            _players.Columns.Add("position", typeof(string));
-            _players.Columns.Add("level", typeof(int));
-            _players.Columns.Add("time", typeof(string));
-
-            var row = _players.NewRow();
-            row["name"] = "GOLEIRO 1";
-            row["position"] = "1";
-            row["level"] = 5;
-            _players.Rows.Add(row);
-
-            row = _players.NewRow();
-            row["name"] = "GOLEIRO 2";
-            row["position"] = "1";
-            row["level"] = 7;
-            _players.Rows.Add(row);
-
-            row = _players.NewRow();
-            row["name"] = "GOLEIRO 3";
-            row["position"] = "1";
-            row["level"] = 3;
-            _players.Rows.Add(row);
-
-
-
-            row = _players.NewRow();
-            row["name"] = "NATAL";
-            row["position"] = "2";
-            row["level"] = 3;
-            _players.Rows.Add(row);
-
-            row = _players.NewRow();
-            row["name"] = "SOARES";
-            row["position"] = "2";
-            row["level"] = 6;
-            _players.Rows.Add(row);
-
-            row = _players.NewRow();
-            row["name"] = "BOCA";
-            row["position"] = "2";
-            row["level"] = 1;
-            _players.Rows.Add(row);
-
-
-
-            row = _players.NewRow();
-            row["name"] = "PET";
-            row["position"] = "3";
-            row["level"] = 10;
-            _players.Rows.Add(row);
-
-            row = _players.NewRow();
-            row["name"] = "JUNIOR";
-            row["position"] = "3";
-            row["level"] = 4;
-            _players.Rows.Add(row);
-
-            row = _players.NewRow();
-            row["name"] = "NEGO";
-            row["position"] = "3";
-            row["level"] = 7;
-            _players.Rows.Add(row);
-
-
-
-            row = _players.NewRow();
-            row["name"] = "NEY";
-            row["position"] = "4";
-            row["level"] = 5;
-            _players.Rows.Add(row);
-
-            row = _players.NewRow();
-            row["name"] = "BOI";
-            row["position"] = "4";
-            row["level"] = 7;
-            _players.Rows.Add(row);
-
-            row = _players.NewRow();
-            row["name"] = "DRI";
-            row["position"] = "4";
-            row["level"] = 3;
-            _players.Rows.Add(row);
-
-
-
-            row = _players.NewRow();
-            row["name"] = "CHRISTOFOLETTI";
-            row["position"] = "5";
-            row["level"] = 3;
-            _players.Rows.Add(row);
-
-            row = _players.NewRow();
-            row["name"] = "SAFADAO";
-            row["position"] = "5";
-            row["level"] = 6;
-            _players.Rows.Add(row);
-
-            row = _players.NewRow();
-            row["name"] = "DU";
-            row["position"] = "5";
-            row["level"] = 1;
-            _players.Rows.Add(row);
-
-
-
-            row = _players.NewRow();
-            row["name"] = "PIMENTA";
-            row["position"] = "6";
-            row["level"] = 10;
-            _players.Rows.Add(row);
-
-            row = _players.NewRow();
-            row["name"] = "BOY";
-            row["position"] = "6";
-            row["level"] = 4;
-            _players.Rows.Add(row);
-
-            row = _players.NewRow();
-            row["name"] = "CHRIS";
-            row["position"] = "6";
-            row["level"] = 7;
-            _players.Rows.Add(row);
-
 
         }
     }
