@@ -21,7 +21,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet" />
 
-    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
 
     <!-- Animate.css -->
     <link rel="stylesheet" href="css/animate.css" />
@@ -84,7 +84,7 @@
             <div class="container">
                 <div class="row animate-box">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
-                        <h2>Professores</h2>
+                        <h2>Professores e Instrutores</h2>
                         <p>"O Jiu-Jitsu que criei foi para dar chance aos mais fracos." Hélio Gracie.</p>
                     </div>
                 </div>
@@ -92,14 +92,14 @@
                     <div class="col-md-4 col-sm-4 animate-box">
                         <div class="trainer">
                             <a href="#">
-                                <img class="img-responsive" src="images/du.jpg" alt="trainer" /></a>
+                                <img class="img-responsive" src="images/du.png" alt="trainer" /></a>
                             <div class="title">
                                 <h3><a href="#">Eduardo Mendes</a></h3>
-                                <span>Black Belt</span>
+                                <span>Professor</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 col-sm-4 animate-box">
+                    <!--<div class="col-md-4 col-sm-4 animate-box">
                         <div class="trainer">
                             <a href="#">
                                 <img class="img-responsive" src="images/du.jpg" alt="trainer" /></a>
@@ -118,14 +118,14 @@
                                 <span>Purple Belt</span>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="col-md-4 col-sm-4 animate-box">
                         <div class="trainer">
                             <a href="#">
-                                <img class="img-responsive" src="images/du.jpg" alt="trainer" /></a>
+                                <img class="img-responsive" src="images/pato.png" alt="trainer" /></a>
                             <div class="title">
                                 <h3><a href="#">Thiago Silva</a></h3>
-                                <span>Purple Belt</span>
+                                <span>Instrutor</span>
                             </div>
                         </div>
                     </div>
@@ -386,10 +386,10 @@
         </div>
 
         <div class="addressMAP">
-            <div class="mapContainer">
+            <div id="mapContainer" class="mapContainer">
                 <div id="map" class="map"></div>
             </div>
-            <div class="addressContainer">
+            <div id="addressContainer" class="addressContainer">
                 <h3 style="color: white; font-weight: 400;">Endereço</h3>
                 <p>Rua 4, 2341 Avenida 26 e 24 Rio Claro (São Paulo)</p>
                 <p>Fone para Contato (19) 3023-9513</p>
@@ -403,7 +403,12 @@
                 <div class="row row-pb-md">
                     <div class="col-md-12 text-center">
                         <h3>Um pouco sobre Mendes TEAM.</h3>
-                        <p>Facilis ipsum reprehenderit nemo molestias. Aut cum mollitia reprehenderit. Eos cumque dicta adipisci architecto culpa amet.</p>
+                        <p>
+                            Na Mendes Jiu-Jitsu (equipe ATOS Jiu-Jitsu Rio Claro) nós fornecemos um ambiente seguro e limpo para pessoas de todas as idades e nível de habilidade.
+Orgulhamo-nos em selecionar instrutores experientes, dedicados e condecorados para ajudá-lo a realizar seus objetivos. A profundidade do conhecimento acumulado pelos nossos instrutores será uma grande vantagem para você na prática e aprendizado do esporte. Se você está treinando para uma competição ou à procura de uma nova rotina de exercícios nossa academia tem algo para você. Temos, também, aulas para mulheres de Jiu-Jitsu, incorporando um treinamento cardiovascular e de auto-defesa, e um programa de artes marciais para crianças.
+Somos um grupo de renome no mundo na arte de Jiu-Jitsu e Submission. 
+Venha participar de uma aula gratuitamente. Você irá treinar na mais profissional instalação de Jiu-Jitsu em Rio Claro. Aqui iremos lhe conceder, em primeira mão, a melhor e mais duradoura experiência no treinamento de Jiu-Jitsu disponível.
+                        </p>
                     </div>
                 </div>
                 <div class="row copyright">

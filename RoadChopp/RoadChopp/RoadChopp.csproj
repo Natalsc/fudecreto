@@ -195,6 +195,7 @@
     <Content Include="sass\bootstrap\mixins\_text-emphasis.scss" />
     <Content Include="sass\bootstrap\mixins\_text-overflow.scss" />
     <Content Include="sass\bootstrap\mixins\_vendor-prefixes.scss" />
+    <None Include="Properties\PublishProfiles\Publish.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

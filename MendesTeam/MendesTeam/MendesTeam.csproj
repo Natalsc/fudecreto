@@ -74,7 +74,7 @@
     <Content Include="default.aspx" />
     <Content Include="font\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="font\icomoon\icomoon.svg" />
-    <Content Include="images\du.jpg" />
+    <Content Include="images\du.png" />
     <Content Include="images\facebook.png" />
     <Content Include="favicon.ico" />
     <Content Include="images\fit.png" />
@@ -85,6 +85,7 @@
     <Content Include="images\loader.gif" />
     <Content Include="images\loc.png" />
     <Content Include="images\logoMendes.png" />
+    <Content Include="images\pato.png" />
     <Content Include="images\submission.png" />
     <Content Include="images\youtube.png" />
     <Content Include="js\bootstrap.min.js" />

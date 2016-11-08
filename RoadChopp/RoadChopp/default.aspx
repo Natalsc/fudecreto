@@ -48,7 +48,7 @@
                 <div class="fh5co-text">
                     <div class="container">
                         <div class="row">
-                            <img class="logo" src="images/LogoSite.png" />
+                            <img id="logo" class="logo" src="images/LogoSite.png" />
                             <h2 class="to-animate">Slogan <span>da</span> <a href="#" target="_blank">empresa</a></h2>
                         </div>
                     </div>
@@ -200,7 +200,7 @@
                         <p class="sub-heading to-animate">Breve descrição sobre as parcerias</p>
                     </div>
                 </div>
-                <img class="logoParceiros" src="images/logoparceiro1.jpg" />
+                <img id="logoPartner1" class="logoParceiros" src="images/logoparceiro1.jpg" />
             </div>
         </div>
         
