@@ -21,6 +21,8 @@
 
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:300,400,500,700,800" rel="stylesheet" />
 
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
+
     <!-- Animate.css -->
     <link rel="stylesheet" href="css/animate.css" />
     <!-- Icomoon Icon Fonts-->

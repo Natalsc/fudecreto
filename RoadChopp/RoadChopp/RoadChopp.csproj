@@ -67,6 +67,7 @@
     <Content Include="css\simple-line-icons.css" />
     <Content Include="css\style.css" />
     <Content Include="default.aspx" />
+    <Content Include="favicon.ico" />
     <Content Include="fonts\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\icomoon\icomoon.svg" />
     <Content Include="fonts\simple-line-icons\Simple-Line-Icons.svg" />

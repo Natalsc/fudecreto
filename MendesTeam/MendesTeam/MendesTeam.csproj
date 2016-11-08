@@ -76,6 +76,7 @@
     <Content Include="font\icomoon\icomoon.svg" />
     <Content Include="images\du.jpg" />
     <Content Include="images\facebook.png" />
+    <Content Include="favicon.ico" />
     <Content Include="images\fit.png" />
     <Content Include="images\imagebg1.jpg" />
     <Content Include="images\img_bg_1.jpg" />
