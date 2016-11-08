@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="MendesTeam._default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="default.aspx.cs" Inherits="MendesTeam.Default" %>
 
 <!DOCTYPE html>
 
@@ -27,25 +27,16 @@
     <link rel="stylesheet" href="css/icomoon.css" />
     <!-- Bootstrap  -->
     <link rel="stylesheet" href="css/bootstrap.css" />
-
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="css/magnific-popup.css" />
-
     <!-- Owl Carousel  -->
     <link rel="stylesheet" href="css/owl.carousel.min.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css" />
-
     <!-- Theme style  -->
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- Modernizr JS -->
     <script src="js/modernizr-2.6.2.min.js"></script>
-    <!-- FOR IE9 below -->
-    <!--[if lt IE 9]>
-	<script src="js/respond.min.js"></script>
-	<![endif]-->
-
-
 
 </head>
 <body>
@@ -58,10 +49,11 @@
                             <div id="fh5co-logo"><a href="default.aspx">MendesTEAM</a></div>
                         </div>
                         <div class="col-xs-12 text-right">
-                            <p class="num">Fone: 19 99999 9999</p>
+                            <p class="num">Fone: 19 3023 9513</p>
                             <ul class="ulsocial">
-                                <li class="instagram"><a href="#" target="_blank"></a></li>
-                                <li class="facebook"><a href="#" target="_blank"></a></li>
+                                <li class="instagram"><a href="https://www.instagram.com/eduardomendesbjj/" target="_blank"></a></li>
+                                <li class="facebook"><a href="https://www.facebook.com/mendesteam/" target="_blank"></a></li>
+                                <li class="youtube"><a href="https://www.youtube.com/channel/UC2bEPH8FlIqvIxCFLo3_9aQ" target="_blank"></a></li>
                             </ul>
                         </div>
                     </div>
@@ -76,7 +68,7 @@
                     <div class="col-md-8 col-md-offset-2 text-center">
                         <div class="display-t">
                             <div class="display-tc animate-box" data-animate-effect="fadeIn">
-                                <h1>Mendes Jiu-Jitsu</h1>
+                                <img src="images/logoMendes.png" />
                                 <h2>Você nunca sabe a força que tem. Até que a sua única alternativa é <a>SER FORTE</a></h2>
                                 <p><a href="https://player.vimeo.com/video/112246844" class="btn btn-primary popup-vimeo">Veja Nosso Video</a></p>
                             </div>
@@ -139,7 +131,7 @@
             </div>
         </div>
 
-        <div id="fh5co-schedule" class="fh5co-bg" style="background-image: url(images/img_bg_1.jpg);">
+        <div id="fh5co-schedule" class="fh5co-bg" style="background: #191919;">
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
@@ -193,7 +185,7 @@
                                 </ul>
                             </div>
 
-                            <div class="fh5co-tab-content tab-content active" data-tab-content="2">
+                            <div class="fh5co-tab-content tab-content" data-tab-content="2">
                                 <ul class="class-schedule">
                                     <li class="text-center">
                                         <span>
@@ -240,7 +232,7 @@
                                 </ul>
                             </div>
 
-                            <div class="fh5co-tab-content tab-content active" data-tab-content="3">
+                            <div class="fh5co-tab-content tab-content" data-tab-content="3">
                                 <ul class="class-schedule">
                                     <li class="text-center">
                                         <span>
@@ -287,7 +279,7 @@
                                 </ul>
                             </div>
 
-                            <div class="fh5co-tab-content tab-content active" data-tab-content="4">
+                            <div class="fh5co-tab-content tab-content" data-tab-content="4">
                                 <ul class="class-schedule">
                                     <li class="text-center">
                                         <span>
@@ -334,7 +326,7 @@
                                 </ul>
                             </div>
 
-                            <div class="fh5co-tab-content tab-content active" data-tab-content="5">
+                            <div class="fh5co-tab-content tab-content" data-tab-content="5">
                                 <ul class="class-schedule">
                                     <li class="text-center">
                                         <span>
@@ -374,7 +366,7 @@
                                 </ul>
                             </div>
 
-                            <div class="fh5co-tab-content tab-content active" data-tab-content="6">
+                            <div class="fh5co-tab-content tab-content" data-tab-content="6">
                                 <ul class="class-schedule">
                                     <li class="text-center">
                                         <span>
@@ -391,11 +383,19 @@
             </div>
         </div>
 
-        <div>
-            <div id="map" class="fh5co-map"></div>
+        <div class="addressMAP">
+            <div class="mapContainer">
+                <div id="map" class="map"></div>
+            </div>
+            <div class="addressContainer">
+                <h3 style="color: white; font-weight: 400;">Endereço</h3>
+                <p>Rua 4, 2341 Avenida 26 e 24 Rio Claro (São Paulo)</p>
+                <p>Fone para Contato (19) 3023-9513</p>
+                <p>Facebook <a href="https://www.facebook.com/mendesteam/" target="_blank">@mendesteam</a></p>
+            </div>
         </div>
 
-        <footer id="fh5co-footer" class="fh5co-bg" style="background-image: url(images/img_bg_1.jpg);" role="contentinfo">
+        <footer id="fh5co-footer" class="fh5co-bg" role="contentinfo">
             <div class="overlay"></div>
             <div class="container">
                 <div class="row row-pb-md">
