@@ -108,17 +108,17 @@
                                 <span>Black Belt</span>
                             </div>
                         </div>
-                    </div>
+                    </div>-->
                     <div class="col-md-4 col-sm-4 animate-box">
                         <div class="trainer">
                             <a href="#">
-                                <img class="img-responsive" src="images/du.jpg" alt="trainer" /></a>
+                                <img class="img-responsive" src="images/tierre.png" alt="trainer" /></a>
                             <div class="title">
                                 <h3><a href="#">Tierre Fortuoso</a></h3>
-                                <span>Purple Belt</span>
+                                <span>Instrutor</span>
                             </div>
                         </div>
-                    </div>-->
+                    </div>
                     <div class="col-md-4 col-sm-4 animate-box">
                         <div class="trainer">
                             <a href="#">

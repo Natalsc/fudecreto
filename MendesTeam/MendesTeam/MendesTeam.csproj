@@ -87,6 +87,7 @@
     <Content Include="images\logoMendes.png" />
     <Content Include="images\pato.png" />
     <Content Include="images\submission.png" />
+    <Content Include="images\tierre.png" />
     <Content Include="images\youtube.png" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\google_map.js" />
