@@ -85,7 +85,7 @@
                 <div class="row animate-box">
                     <div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
                         <h2>Professores e Instrutores</h2>
-                        <p>"O Jiu-Jitsu que criei foi para dar chance aos mais fracos." Hélio Gracie.</p>
+                        <p>"Para uma constante evolução no Jiu-Jitsu você precisa mostrar total confiança ao seus alunos e ao mesmo tempo confiar plenamente em cada um deles." Eduardo Mendes.</p>
                     </div>
                 </div>
                 <div class="row">
