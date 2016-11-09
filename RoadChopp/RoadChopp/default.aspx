@@ -49,13 +49,16 @@
                     <div class="container">
                         <div class="row">
                             <img id="logo" class="logo" src="images/LogoSite.png" />
-                            <h2 class="to-animate">Slogan <span>da</span> <a href="#" target="_blank">empresa</a></h2>
+                            <h2 class="to-animate">Esteja pronto <span>para </span> <a href="#" target="_blank">ROAD CHOPP</a>!</h2>
                         </div>
                     </div>
                 </div>
                 <ul class="slides">
-                    <li style="background-image: url(images/capa.jpg);" data-stellar-background-ratio="0.5"></li>
-                    <li style="background-image: url(images/capa2.jpg);" data-stellar-background-ratio="0.5"></li>
+                    <li style="background-image: url(images/bg_nav1_1.jpg);" data-stellar-background-ratio="0.5"></li>
+                    <li style="background-image: url(images/bg_nav1_2.jpg);" data-stellar-background-ratio="0.5"></li>
+                    <li style="background-image: url(images/bg_nav1_3.jpg);" data-stellar-background-ratio="0.5"></li>
+                    <li style="background-image: url(images/bg_nav1_4.jpg);" data-stellar-background-ratio="0.5"></li>
+                    <li style="background-image: url(images/bg_nav1_5.jpg);" data-stellar-background-ratio="0.5"></li>
                 </ul>
             </div>
         </div>
@@ -66,7 +69,7 @@
                     <div class="fh5co-menu-1">
                         <a href="#" data-nav-section="home">Inicio</a>
                         <a href="#" data-nav-section="about">Sobre Nós</a>
-                        <a href="#" data-nav-section="features">Cardápio</a>
+                        <a href="#" data-nav-section="features">Variedades</a>
                     </div>
                     <div class="fh5co-logo">
                         <a href="default.aspx">Road Chopp</a>
@@ -81,11 +84,16 @@
         </div>
 
         <div id="fh5co-about" data-section="about">
-            <div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(images/copo.jpg)"></div>
+            <div class="fh5co-2col fh5co-bg to-animate-2" style="background-image: url(images/about.jpg)"></div>
             <div class="fh5co-2col fh5co-text">
                 <h2 class="heading to-animate">Sobre a Road Chopp</h2>
-                <p class="to-animate"><span class="firstcharacter">F</span>ar far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.</p>
-                <p class="text-center to-animate"><a href="#" class="btn btn-primary btn-outline">Get in touch</a></p>
+                <p class="to-animate"><span class="firstcharacter">R</span>OAD CHOPP é o primeiro beer-truck com a proposta de oferecer chopp de forma única, atendendo aos mais exigentes paladares, além de surpreender pelo visual exclusivo da sua trave, em formato de guidão de uma Custom.</p>
+                <p class="to-animate">Criado por um grupo de empresários e amantes da vida bimodal, o truck traz uma experiência totalmente nova ao paladar, diferente de qualquer outro bar ou beer-truck: a possibilidade de servir simultaneamente 4 chopps diferentes a uma temperatura de -2º C.</p>
+                <p class="to-animate">O ROAD CHOPP pode trabalhar com qualquer marca de chopp que o evento desejar ou com as opções mais respeitáveis, como: Brahma, Stella Artois, Heineken e os deliciosos chopps gourmet da HZB (Pilsen, IPA, RED, Weiss, Stout).</p>
+                <p class="to-animate">Contamos ainda com a venda de sucos naturais sem conservantes, refrigerantes e drinks alcoólicos ou não.</p>
+                <p class="to-animate">O seu público terá um show à parte com o ROAD CHOPP e uma variedade de opções de bebida de altíssima qualidade, aproveitando o melhor do estilo bimodal, criando um clima exclusivo para o seu evento.</p>
+                <p class="to-animate">O ROAD CHOPP pode oferecer brindes exclusivos para sorteio durante o evento e auxilio na divulgação (quando cabível) em redes sociais e público motociclista.</p>
+                <p class="to-animate">Esteja pronto para ROAD CHOPP!</p>
             </div>
         </div>
 
@@ -93,7 +101,7 @@
             <div class="container">
                 <div class="row text-center fh5co-heading row-padded">
                     <div class="col-md-8 col-md-offset-2">
-                        <h2 class="heading to-animate">Cardápio</h2>
+                        <h2 class="heading to-animate">Variedades</h2>
                         <p class="sub-heading to-animate">breve descrição da marca</p>
                     </div>
                 </div>

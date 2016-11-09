@@ -71,10 +71,13 @@
     <Content Include="fonts\bootstrap\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\icomoon\icomoon.svg" />
     <Content Include="fonts\simple-line-icons\Simple-Line-Icons.svg" />
-    <Content Include="images\capa.jpg" />
-    <Content Include="images\capa2.jpg" />
+    <Content Include="images\about.jpg" />
+    <Content Include="images\bg_nav1_1.jpg" />
+    <Content Include="images\bg_nav1_2.jpg" />
+    <Content Include="images\bg_nav1_3.jpg" />
+    <Content Include="images\bg_nav1_4.jpg" />
+    <Content Include="images\bg_nav1_5.jpg" />
     <Content Include="images\cerveja.jpg" />
-    <Content Include="images\copo.jpg" />
     <Content Include="images\loader.gif" />
     <Content Include="images\logoparceiro1.jpg" />
     <Content Include="images\LogoSite.png" />
