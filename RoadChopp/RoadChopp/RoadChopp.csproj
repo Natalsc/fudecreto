@@ -77,6 +77,7 @@
     <Content Include="images\bg_nav1_3.jpg" />
     <Content Include="images\bg_nav1_4.jpg" />
     <Content Include="images\bg_nav1_5.jpg" />
+    <Content Include="images\capa.jpg" />
     <Content Include="images\cerveja.jpg" />
     <Content Include="images\loader.gif" />
     <Content Include="images\logoparceiro1.jpg" />

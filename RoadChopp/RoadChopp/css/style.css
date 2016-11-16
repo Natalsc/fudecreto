@@ -212,7 +212,7 @@ p {
  * Flexslider
  */
 #fh5co-home {
-    min-height: 700px;
+    min-height: 600px;
     background: #fff url(../images/loader.gif) no-repeat center center;
 }
 
@@ -616,7 +616,7 @@ p {
 
 #fh5co-featured {
     padding: 7em 0;
-    background: #130d08 url(../images/wood_1.png) repeat;
+    background: url('/images/wood_1.png') repeat;
 }
 
 @media screen and (max-width: 768px) {
@@ -1178,13 +1178,12 @@ p {
 
 #fh5co-contact .fh5co-contact-info {
     padding: 0;
-    margin: 0 0 1.5em 0;
 }
 
     #fh5co-contact .fh5co-contact-info li {
         position: relative;
         padding: 0;
-        margin: 0 0 1.5em 0;
+        margin: 0 0 0 0;
         padding-left: 50px;
         list-style: none;
     }

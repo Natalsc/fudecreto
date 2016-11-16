@@ -102,7 +102,7 @@
                 <div class="row text-center fh5co-heading row-padded">
                     <div class="col-md-8 col-md-offset-2">
                         <h2 class="heading to-animate">Variedades</h2>
-                        <p class="sub-heading to-animate">breve descrição da marca</p>
+                        <p class="sub-heading to-animate">O chopp e a cerveja HZB é concebida seguindo os mais rigorosos padrões de qualidade, com receitas exclusivas oferecendo um diferencial em cores, sabores e aromas.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -171,29 +171,29 @@
                 <div class="row text-center fh5co-heading row-padded">
                     <div class="col-md-8 col-md-offset-2 to-animate">
                         <h2 class="heading">Próximos Eventos</h2>
-                        <p class="sub-heading">Breve descrição sobre a agenda</p>
+                        <p class="sub-heading">Acompanhe-nos em..</p>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="fh5co-event to-animate-2">
-                            <h3>Kitchen Workshops</h3>
-                            <span class="fh5co-event-meta">March 19th, 2016</span>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <h3>Tennesse Harley Davidson Campinas</h3>
+                            <span class="fh5co-event-meta">22 de Outubro</span>
+                            <p>Estacione sua máquina e celebre com seus amigos o melhor e mais gelado chopp</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="fh5co-event to-animate-2">
-                            <h3>Music Concerts</h3>
-                            <span class="fh5co-event-meta">March 19th, 2016</span>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                           <h3>Tennesse Harley Davidson Campinas</h3>
+                            <span class="fh5co-event-meta">22 de Outubro</span>
+                            <p>Estacione sua máquina e celebre com seus amigos o melhor e mais gelado chopp</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="fh5co-event to-animate-2">
-                            <h3>Free to Eat Party</h3>
-                            <span class="fh5co-event-meta">March 19th, 2016</span>
-                            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                            <h3>Tennesse Harley Davidson Campinas</h3>
+                            <span class="fh5co-event-meta">22 de Outubro</span>
+                            <p>Estacione sua máquina e celebre com seus amigos o melhor e mais gelado chopp</p>
                         </div>
                     </div>
                 </div>
@@ -219,12 +219,15 @@
                         <h3>Contact Info</h3>
                         <ul class="fh5co-contact-info">
                             <li class="fh5co-contact-address ">
-                                <i class="icon-home"></i>
-                               Endereço caso haja um
-                                <br>
-                                cidade / estado
+                               Débora Aceti
 							</li>
-                            <li><i class="icon-phone"></i>(19) 99999-9999</li>
+                            <li><i class="icon-phone"></i>(19) 99746-1810</li>
+                            <li><i class="icon-envelope"></i>email@roadchop.com.br</li>
+                            
+                            <li class="fh5co-contact-address ">
+                               Zeca Andrade
+							</li>
+                            <li><i class="icon-phone"></i>(19) 97122-9839</li>
                             <li><i class="icon-envelope"></i>email@roadchop.com.br</li>
                         </ul>
                     </div>
@@ -246,9 +249,9 @@
             <div class="row">
                 <div class="col-md-12 text-center">
                     <ul class="fh5co-social">
-                        <li class="to-animate-2"><a href="#"><i class="icon-facebook"></i></a></li>
+                        <li class="to-animate-2"><a href="https://pt-br.facebook.com/roadchopp/" target="_blank"><i class="icon-facebook"></i></a></li>
                         <li class="to-animate-2"><a href="#"><i class="icon-twitter"></i></a></li>
-                        <li class="to-animate-2"><a href="#"><i class="icon-instagram"></i></a></li>
+                        <li class="to-animate-2"><a href="https://www.instagram.com/road_chopp/" target="_blank"><i class="icon-instagram"></i></a></li>
                     </ul>
                 </div>
             </div>
