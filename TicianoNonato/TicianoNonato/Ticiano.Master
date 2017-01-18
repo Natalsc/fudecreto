@@ -1,0 +1,120 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Ticiano.master.cs" Inherits="TicianoNonato.Ticiano" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Ticiano Nonato Advogados</title>
+    <!-- Meta-Tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //Meta-Tags -->
+    <!-- Custom-Theme-Files -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+
+    <!-- //Custom-Theme-Files -->
+    <!-- Web-Fonts -->
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800" type="text/css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Montserrat:400,700" type="text/css" />
+    <!-- //Web-Fonts -->
+    <!-- Default-JavaScript-File -->
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+    <!--FlexSlider-->
+    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <script defer src="js/jquery.flexslider.js"></script>
+    <script type="text/javascript">
+        $(window).load(function () {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function (slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+    </script>
+    <!--End-slider-script-->
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="header">
+            <!-- Top-Bar -->
+            <div class="top-bar">
+                <div class="container">
+                    <div class="header-nav">
+                        <nav class="navbar navbar-default">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <h1><a class="navbar-brand" href="Default.aspx">Ticiano Nonato</a></h1>
+                            </div>
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav ">
+                                    <li><a class=" active" href="index.html">Home</a></li>
+                                    <li><a href="About.aspx">Sobre Nós</a></li>
+                                    <li><a href="#">Nossa Equipe</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Serviços <b class="caret"></b></a>
+                                        <ul class="dropdown-menu agile_short_dropdown">
+                                            <li><a href="#">Trabalhista</a></li>
+                                            <li><a href="#">Previdenciário</a></li>
+                                            <li><a href="#">Cívil</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="contact.html">Contato</a></li>
+                                </ul>
+                            </div>
+                            <!-- /navbar-collapse -->
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //Top-Bar -->
+        <!-- //Header -->
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+        <!-- footer -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="col-md-5 w3l-footer-top">
+                    <h3>CADASTRE-SE</h3>
+                    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit reprehenderit qui in ea.</p>
+                    <div class="newsletter">
+                        <input class="email" type="email" placeholder="Your email..." required="" />
+                        <input type="submit" class="submit" value="" />
+                    </div>
+                </div>
+
+                <div class="col-md-5 wthree-footer-top">
+                    <h3>About</h3>
+                    <p>Cras consectetur tempus lectus id accumsan. Vivamus gravida justo mattis ex pretium, eu sollicitudin tortor ullamcorper. Quisque vitae diam molestie, tincidunt velit vitae, viverra nisl. Mauris ultrices commodo imperdiet. </p>
+                </div>
+                <div class="col-md-2 w3ls-footer-top">
+                    <h3>Opções</h3>
+                    <ul>
+                        <li><a href="Default.aspx">Home</a></li>
+                        <li><a href="About.aspx">Sobre Nós</a></li>
+                        <li><a href="#">Nossa Equipe</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <div class="footer-w3layouts">
+            <div class="container">
+                <div class="agile-copy">
+                    <p>&copy; 2016 Developed by Natal. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+        <!-- //footer -->
+    </form>
+</body>
+</html>
